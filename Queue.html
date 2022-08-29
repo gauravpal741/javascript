@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in javascript</title>
+</head>
+<body>
+    <script>
+        let queue = []
+        let currentSize = queue.length;
+            let maxSize = 5;
+            function enqueue(newval){
+                if(currentSize >= maxSize){
+                    alert("hello ruko")
+                   
+                }
+                else{
+                    queue[currentSize] = newval;
+                currentSize++
+                }
+                
+            }
+
+                function dequeue(){
+                    for(let i=0;i<queue.length-1;i++){
+                        queue[i] = queue[i+1]
+                        
+                    }
+                    currentSize --;
+                    queue.length = currentSize
+
+                }
+
+
+            function display(){
+                console.log(queue);
+            }
+
+            function front(){
+                if(!isEmpty){
+                    console.log(queue[0]);
+                }
+                else{
+                    alert("stack is empty")
+                }
+            }
+
+            function rear(){
+                if(!isEmpty){
+                    console.log(queue[currentSize-1]);
+                }
+                else{
+                    alert("stack is empty")
+                }
+            }
+
+
+
+            function isEmpty(){
+                if(currentSize <= 0){
+                    return true
+                }
+                else{
+                    return false
+                }
+            }
+
+            enqueue(5)
+            enqueue(8)
+            enqueue(7)
+            enqueue(9)
+            enqueue(4)
+            // enqueue(5)
+            
+            dequeue()
+           
+            display()
+            
+    </script>
+</body>
+</html>

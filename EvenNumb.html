@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number </title>
+</head>
+<body>
+    <script>
+        let data = [10,19,6,18,45,68,90,35,100]
+        let evenArr = []
+        let count = 0 ;
+        // for(let i=0;i<data.length;i++){
+        //     if(data[i]%2 === 0){
+              
+        //         evenArr.push(data[i])
+        //     }
+        // }
+
+        // for(let j=0;j<evenArr.length;j++){
+        //     evenArr[j] = evenArr[j] * 2
+        // }
+
+        // for(let k=0 ; k<evenArr.length;k++){
+        //     count++
+        // }
+        // console.log(evenArr);
+        // console.log(count);
+
+        for(let i=0;i<data.length;i++){
+            if(data[i]%2 === 0){
+                count++
+                    evenArr.push(data[i]*2)
+            }
+        }
+        console.log(evenArr);
+        console.log(count);
+
+
+
+
+
+    </script>
+</body>
+</html>

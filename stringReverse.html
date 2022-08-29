@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse string with stack</title>
+</head>
+<body>
+    <script>
+        let data = []
+        let currentSize = data.length;
+        function push(newval){
+            data[currentSize]= newval;
+            currentSize += 1
+        }
+        function pop(){
+            lastRemoveItem = data[currentSize-1]
+            currentSize -= 1
+            data.length = currentSize;
+            return lastRemoveItem;
+        }
+       
+        function reverse(item){
+            for(let i=0;i<item.length;i++){
+                push(item[i])
+            }
+            for(let i=0;i<item.length;i++){
+                item[i] =  pop()
+            }
+        }
+        let str = "gaurav"
+        str =str.split("")
+        reverse(str)
+        console.log(str.join(""));
+    </script>
+</body>
+</html>

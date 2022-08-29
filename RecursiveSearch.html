@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive  Search</title>
+</head>
+<body>
+    <script>
+        let data = [10,15,19,20,25]
+        let start = 0;
+        let end = data.length-1;
+        let find = 20;
+        let posi = undefined;
+        function recusriveBinary(data,start,end){
+                let mid = Math.floor((start+end)/2)
+               if(data[mid] == find){
+                posi = mid
+                return false
+               }
+               else if(data[mid]<find){
+                recusriveBinary(data,mid+1,end)
+               }
+               else{
+                recusriveBinary(data,start,mid-1)
+               }
+        }
+
+        recusriveBinary(data,start,end)
+        console.log(posi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Push and Pop</title>
+</head>
+<body>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+        function push(newval){
+            if(max>data.length){
+                data[currentSize] = newval;
+            currentSize++
+            }
+            else{
+                console.log(newval);
+            }
+           
+        }
+
+        function pop(){
+            if(currentSize>0){
+               currentSize -= 1;
+               data.length = currentSize
+            }
+            else{
+                console.log("no");
+            }
+        }
+
+        push(1)
+        push(2)
+        push(3)
+        push(4)
+        push(5)
+        push(6)
+        push(7)
+            pop()
+            pop()
+            pop()
+            pop()
+            push(55)
+            push(12)
+        
+       
+      console.log(data);
+    </script>
+</body>
+</html>

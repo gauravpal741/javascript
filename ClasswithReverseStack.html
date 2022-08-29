@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class With Reverse Stack </title>
+</head>
+
+<body>
+    <script>
+        class Stack {
+         
+            item = []
+            currentSize;
+            mazSize;
+            lastRemoved;
+            constructor(size) {
+                this.mazSize = size;
+                this.currentSize = this.item.length;
+            }
+            push(newval) {
+                if (this.currentSize >= this.mazSize) {
+                    alert("stack is full")
+                }
+                else {
+                    this.item[this.currentSize] = newval;
+                    this.currentSize += 1;
+                }
+            }
+            pop() {
+                if (this.currentSize > 0) {
+                    this.lastRemoved = this.item[this.currentSize - 1]
+                    
+                    this.currentSize -= 1;
+                    this.item.length = this.currentSize;
+                    return this.lastRemoved;
+                } else {
+                    alert("already empty stack")
+                }
+            }
+
+            reverse(item) {
+                for (let i = 0; i < item.length; i++) {
+                   this.push(item[i])
+                }
+                for (let i = 0; i < item.length; i++) {
+                    console.log(item[i]);
+                  item[i] = this.pop()
+
+                }
+            }
+            display() {
+                console.log(item);
+            }
+        }
+
+           str1 = new Stack()
+       let str = "gaurav"
+        str2 = str.split("")
+         str1.reverse(str2)
+        // str1.push()
+        // str1.display()
+        // console.log(str.join(""));
+        </script>
+</body>
+
+</html>
